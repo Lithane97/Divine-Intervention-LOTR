@@ -2393,6 +2393,32 @@ DI_culture_has_innovation_dunlending_warriors = {
 	}
 }
 
+# innovation_armored_dunmen_warfare
+DI_remove_innovation_armored_dunmen_warfare = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_armored_dunmen_warfare
+		}
+	}
+}
+
+DI_add_innovation_armored_dunmen_warfare = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_armored_dunmen_warfare
+		}
+	}
+}
+
+DI_culture_has_innovation_armored_dunmen_warfare = {
+	scope = culture
+	is_valid = {
+		has_innovation = innovation_armored_dunmen_warfare
+	}
+}
+
 # innovation_hillmen_warfare
 DI_remove_innovation_hillmen_warfare = {
 	scope = character
@@ -2806,6 +2832,32 @@ DI_culture_has_innovation_dune_sea_warfare = {
 	scope = culture
 	is_valid = {
 		has_innovation = innovation_dune_sea_warfare
+	}
+}
+
+# innovation_qarsa_warfare
+DI_remove_innovation_qarsa_warfare = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_qarsa_warfare
+		}
+	}
+}
+
+DI_add_innovation_qarsa_warfare = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_qarsa_warfare
+		}
+	}
+}
+
+DI_culture_has_innovation_qarsa_warfare = {
+	scope = culture
+	is_valid = {
+		has_innovation = innovation_qarsa_warfare
 	}
 }
 
@@ -3378,6 +3430,58 @@ DI_culture_has_innovation_dunedain_ranger_warfare = {
 	scope = culture
 	is_valid = {
 		has_innovation = innovation_dunedain_ranger_warfare
+	}
+}
+
+# innovation_talon_knights
+DI_remove_innovation_talon_knights = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_talon_knights
+		}
+	}
+}
+
+DI_add_innovation_talon_knights = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_talon_knights
+		}
+	}
+}
+
+DI_culture_has_innovation_talon_knights = {
+	scope = culture
+	is_valid = {
+		has_innovation = innovation_talon_knights
+	}
+}
+
+# innovation_nimrodel_rangers
+DI_remove_innovation_nimrodel_rangers = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_nimrodel_rangers
+		}
+	}
+}
+
+DI_add_innovation_nimrodel_rangers = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_nimrodel_rangers
+		}
+	}
+}
+
+DI_culture_has_innovation_nimrodel_rangers = {
+	scope = culture
+	is_valid = {
+		has_innovation = innovation_nimrodel_rangers
 	}
 }
 
@@ -3976,32 +4080,6 @@ DI_culture_has_innovation_knights_of_kharadune_warfare = {
 	scope = culture
 	is_valid = {
 		has_innovation = innovation_knights_of_kharadune_warfare
-	}
-}
-
-# innovation_conscripts_warfare
-DI_remove_innovation_conscripts_warfare = {
-	scope = character
-	effect = {
-		var:DI_innovation_selected_culture = {
-			remove_innovation = innovation_conscripts_warfare
-		}
-	}
-}
-
-DI_add_innovation_conscripts_warfare = {
-	scope = character
-	effect = {
-		var:DI_innovation_selected_culture = {
-			add_innovation = innovation_conscripts_warfare
-		}
-	}
-}
-
-DI_culture_has_innovation_conscripts_warfare = {
-	scope = culture
-	is_valid = {
-		has_innovation = innovation_conscripts_warfare
 	}
 }
 

@@ -1,0 +1,180 @@
+﻿DI_add_trait_xp = {
+    switch = {
+        trigger = $TRACK$
+
+        flag:armour_smith = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = armour_smith
+                value = $VALUE$
+            }
+        }
+        flag:bandit = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = bandit
+                value = $VALUE$
+            }
+        }
+        flag:bow = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = bow
+                value = $VALUE$
+            }
+        }
+        flag:danger = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = danger
+                value = $VALUE$
+            }
+        }
+        flag:enchanting_smith = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = enchanting_smith
+                value = $VALUE$
+            }
+        }
+        flag:falconer = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = falconer
+                value = $VALUE$
+            }
+        }
+        flag:foot = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = foot
+                value = $VALUE$
+            }
+        }
+        flag:gondor_cities = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = gondor_cities
+                value = $VALUE$
+            }
+        }
+        flag:haruzan_cities = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = haruzan_cities
+                value = $VALUE$
+            }
+        }
+        flag:hewer = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = hewer
+                value = $VALUE$
+            }
+        }
+        flag:historian = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = historian
+                value = $VALUE$
+            }
+        }
+        flag:horse = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = horse
+                value = $VALUE$
+            }
+        }
+        flag:hunter = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = hunter
+                value = $VALUE$
+            }
+        }
+        flag:jewel_smith = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = jewel_smith
+                value = $VALUE$
+            }
+        }
+        flag:marauder = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = marauder
+                value = $VALUE$
+            }
+        }
+        flag:poacher = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = poacher
+                value = $VALUE$
+            }
+        }
+        flag:propagandist = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = propagandist
+                value = $VALUE$
+            }
+        }
+        flag:prospector = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = prospector
+                value = $VALUE$
+            }
+        }
+        flag:thief = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = thief
+                value = $VALUE$
+            }
+        }
+        flag:travel = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = travel
+                value = $VALUE$
+            }
+        }
+        flag:trickster = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = trickster
+                value = $VALUE$
+            }
+        }
+        flag:umbar_cities = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = umbar_cities
+                value = $VALUE$
+            }
+        }
+        flag:weapon_smith = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = weapon_smith
+                value = $VALUE$
+            }
+        }
+        flag:wit = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                track = wit
+                value = $VALUE$
+            }
+        }
+        fallback = {
+            add_trait_xp = {
+                trait = $TRAIT$
+                value = $VALUE$
+            }
+        }
+    }
+}

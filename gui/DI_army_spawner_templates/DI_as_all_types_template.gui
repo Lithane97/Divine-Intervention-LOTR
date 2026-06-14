@@ -884,6 +884,18 @@ template DI_AS_All_Types
         }
 
         DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('rhunnic_war_drakes')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_rhunnic_war_drakes_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+
+            blockoverride "visible_when" {
+                visible = "[GetVariableSystem.HasValue('army_spawner_tab', 'other')]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
             datacontext = "[GetMenAtArmsType('dale_bowmen')]"
 
             blockoverride "on_add" {
@@ -1696,6 +1708,22 @@ template DI_AS_All_Types
         }
 
         DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('nimrodel_rangers')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_nimrodel_rangers_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('talon_knights')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_talon_knights_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
             datacontext = "[GetMenAtArmsType('numenorean_soldiers')]"
 
             blockoverride "on_add" {
@@ -1900,6 +1928,14 @@ template DI_AS_All_Types
 
             blockoverride "on_add" {
                 onclick = "[GetScriptedGui('DI_clan_axemen_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('dunmen_heavy_infantry_unlock')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_dunmen_heavy_infantry_unlock_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
             }
         }
 
@@ -2672,6 +2708,14 @@ template DI_AS_All_Types
         }
 
         DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('qarsag_outriders')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_qarsag_outriders_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
             datacontext = "[GetMenAtArmsType('wardens_of_the_council')]"
 
             blockoverride "on_add" {
@@ -2785,10 +2829,6 @@ template DI_AS_All_Types
             blockoverride "on_add" {
                 onclick = "[GetScriptedGui('DI_indentured_conscripts_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
             }
-
-            blockoverride "visible_when" {
-                visible = "[GetVariableSystem.HasValue('army_spawner_tab', 'other')]"
-            }
         }
 
         DI_army_spawner_vbox = {
@@ -2892,6 +2932,14 @@ template DI_AS_All_Types
 
             blockoverride "on_add" {
                 onclick = "[GetScriptedGui('DI_grond_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+            }
+        }
+
+        DI_army_spawner_vbox = {
+            datacontext = "[GetMenAtArmsType('angmar_ironclaws')]"
+
+            blockoverride "on_add" {
+                onclick = "[GetScriptedGui('DI_angmar_ironclaws_effect').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
             }
         }
 

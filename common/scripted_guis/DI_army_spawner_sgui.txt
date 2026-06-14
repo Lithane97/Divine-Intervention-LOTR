@@ -4851,6 +4851,51 @@ DI_dragon_knight_horse_archers_effect = {
 	}
 }
 
+### Rhunnic War Drakes Spawner
+DI_rhunnic_war_drakes_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = rhunnic_war_drakes
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = rhunnic_war_drakes
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = rhunnic_war_drakes
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = rhunnic_war_drakes
+			}
+		}
+	}
+}
+
 ### Dale Bowmen Spawner
 DI_dale_bowmen_effect = {
 	scope = character
@@ -9351,6 +9396,96 @@ DI_grey_company_effect = {
 	}
 }
 
+### Nimrodel Rangers Spawner
+DI_nimrodel_rangers_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = nimrodel_rangers
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = nimrodel_rangers
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = nimrodel_rangers
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = nimrodel_rangers
+			}
+		}
+	}
+}
+
+### Talon Knights Spawner
+DI_talon_knights_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = talon_knights
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = talon_knights
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = talon_knights
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = talon_knights
+			}
+		}
+	}
+}
+
 ### Numenorean Soldiers Spawner
 DI_numenorean_soldiers_effect = {
 	scope = character
@@ -10516,6 +10651,51 @@ DI_clan_axemen_effect = {
 				location = root.location
 				inheritable = no
 				name = clan_axemen
+			}
+		}
+	}
+}
+
+### Dunmen Heavy Infantry Unlock Spawner
+DI_dunmen_heavy_infantry_unlock_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = dunmen_heavy_infantry_unlock
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = dunmen_heavy_infantry_unlock
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = dunmen_heavy_infantry_unlock
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = dunmen_heavy_infantry_unlock
 			}
 		}
 	}
@@ -14751,6 +14931,51 @@ DI_guard_of_abrakhan_effect = {
 	}
 }
 
+### Qarsag Outriders Spawner
+DI_qarsag_outriders_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = qarsag_outriders
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = qarsag_outriders
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = qarsag_outriders
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = qarsag_outriders
+			}
+		}
+	}
+}
+
 ### Wardens Of The Council Spawner
 DI_wardens_of_the_council_effect = {
 	scope = character
@@ -15916,6 +16141,51 @@ DI_grond_effect = {
 				location = root.location
 				inheritable = no
 				name = grond
+			}
+		}
+	}
+}
+
+### Angmar Ironclaws Spawner
+DI_angmar_ironclaws_effect = {
+	scope = character
+
+	effect = {
+		random_owned_story = {
+			limit = {
+				story_type = DI_misc_variables_story
+			}
+			save_scope_as = DI_story
+		}
+		
+		if = {
+			limit = {
+				scope:DI_story = { has_variable = DI_pinned_char_var }
+			}
+			every_living_character = {
+				limit = { has_character_flag = pinned_for_edit }
+				save_scope_as = target
+
+				spawn_army = {
+					men_at_arms = {
+						type = angmar_ironclaws
+						men = scope:DI_story.var:DI_army_spawner_increment_value
+					}
+					location = scope:target.location
+					inheritable = no
+					name = angmar_ironclaws
+				}
+			}
+		}
+		else = {
+			spawn_army = {
+				men_at_arms = {
+					type = angmar_ironclaws
+					men = scope:DI_story.var:DI_army_spawner_increment_value
+				}
+				location = root.location
+				inheritable = no
+				name = angmar_ironclaws
 			}
 		}
 	}
