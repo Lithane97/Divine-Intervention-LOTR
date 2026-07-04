@@ -429,6 +429,8 @@ DI_error_suppression.1 = {
         fix_variable_error = { X = wonder_denethor }
         fix_variable_error = { X = wonder_dol_amroth }
         fix_variable_error = { X = wonder_doors_of_durin }
+        fix_variable_error = { X = wonder_dragon_knights_capital }
+        fix_variable_error = { X = wonder_dragon_knights_headquarters }
         fix_variable_error = { X = wonder_dread_keep }
         fix_variable_error = { X = wonder_dunharrow }
         fix_variable_error = { X = wonder_dunland_shrine }
@@ -483,6 +485,7 @@ DI_error_suppression.1 = {
         fix_variable_error = { X = wonder_hron_tumrakhi }
         fix_variable_error = { X = wonder_iflenak }
         fix_variable_error = { X = wonder_igal_zaram }
+        fix_variable_error = { X = wonder_igal_zaram_warrens }
         fix_variable_error = { X = wonder_imladris_ruined }
         fix_variable_error = { X = wonder_imrazor_hallow }
         fix_variable_error = { X = wonder_isengard }
@@ -2303,6 +2306,8 @@ DI_error_suppression.1 = {
         fix_variable_error = { X = wonder_dol_amroth_02 }
         fix_variable_error = { X = wonder_dol_amroth_03 }
         fix_variable_error = { X = wonder_doors_of_durin }
+        fix_variable_error = { X = wonder_dragon_knights_capital }
+        fix_variable_error = { X = wonder_dragon_knights_headquarters }
         fix_variable_error = { X = wonder_dread_keep }
         fix_variable_error = { X = wonder_dunharrow_01 }
         fix_variable_error = { X = wonder_dunharrow_02 }
@@ -2403,6 +2408,7 @@ DI_error_suppression.1 = {
         fix_variable_error = { X = wonder_igal_zaram }
         fix_variable_error = { X = wonder_igal_zaram_cleansed }
         fix_variable_error = { X = wonder_igal_zaram_embassy }
+        fix_variable_error = { X = wonder_igal_zaram_warrens }
         fix_variable_error = { X = wonder_imladris_ruined_01 }
         fix_variable_error = { X = wonder_imladris_ruined_02 }
         fix_variable_error = { X = wonder_imrazor_hallow }

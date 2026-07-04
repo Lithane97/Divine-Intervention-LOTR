@@ -19469,6 +19469,100 @@ DI_tm_destroy_building_great_building_nilulonde_sgui = {
     }
 }
 
+DI_tm_building_wonder_dragon_knights_capital_sgui = {
+    scope = character # Player Character
+
+    is_valid = {
+        OR = {
+            NOT = { has_variable = DI_title_manager_building_level }
+            var:DI_title_manager_building_level = 1
+        }
+    }
+
+    effect = {
+        save_scope_as = player
+
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = {
+                    limit = {
+                        OR = {
+                            NOT = { scope:player = { has_variable = DI_title_manager_building_level } }
+                            scope:player = { var:DI_title_manager_building_level = 1 }
+                        }
+                    }
+                    add_building = wonder_dragon_knights_capital
+                }
+            }
+        }
+    }
+}
+
+DI_tm_destroy_building_wonder_dragon_knights_capital_sgui = {
+    scope = character # Player Character
+
+    effect = {
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = { limit = { has_building = wonder_dragon_knights_capital } remove_building = wonder_dragon_knights_capital }
+            }
+        }
+    }
+}
+
+DI_tm_building_wonder_igal_zaram_warrens_sgui = {
+    scope = character # Player Character
+
+    is_valid = {
+        OR = {
+            NOT = { has_variable = DI_title_manager_building_level }
+            var:DI_title_manager_building_level = 1
+        }
+    }
+
+    effect = {
+        save_scope_as = player
+
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = {
+                    limit = {
+                        OR = {
+                            NOT = { scope:player = { has_variable = DI_title_manager_building_level } }
+                            scope:player = { var:DI_title_manager_building_level = 1 }
+                        }
+                    }
+                    add_building = wonder_igal_zaram_warrens
+                }
+            }
+        }
+    }
+}
+
+DI_tm_destroy_building_wonder_igal_zaram_warrens_sgui = {
+    scope = character # Player Character
+
+    effect = {
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = { limit = { has_building = wonder_igal_zaram_warrens } remove_building = wonder_igal_zaram_warrens }
+            }
+        }
+    }
+}
+
 DI_tm_building_noria_sgui = {
     scope = character # Player Character
 
@@ -30496,6 +30590,53 @@ DI_tm_destroy_building_wonder_temple_sulereb_sgui = {
     }
 }
 
+DI_tm_building_wonder_dragon_knights_headquarters_sgui = {
+    scope = character # Player Character
+
+    is_valid = {
+        OR = {
+            NOT = { has_variable = DI_title_manager_building_level }
+            var:DI_title_manager_building_level = 1
+        }
+    }
+
+    effect = {
+        save_scope_as = player
+
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = {
+                    limit = {
+                        OR = {
+                            NOT = { scope:player = { has_variable = DI_title_manager_building_level } }
+                            scope:player = { var:DI_title_manager_building_level = 1 }
+                        }
+                    }
+                    add_building = wonder_dragon_knights_headquarters
+                }
+            }
+        }
+    }
+}
+
+DI_tm_destroy_building_wonder_dragon_knights_headquarters_sgui = {
+    scope = character # Player Character
+
+    effect = {
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = { limit = { has_building = wonder_dragon_knights_headquarters } remove_building = wonder_dragon_knights_headquarters }
+            }
+        }
+    }
+}
+
 DI_tm_building_wonder_ettenmoors_sgui = {
     scope = character # Player Character
 
@@ -41479,6 +41620,8 @@ DI_remove_buildings_sgui = {
                 else_if = { limit = { has_building = wonder_dol_amroth_02 } remove_building = wonder_dol_amroth_02 }
                 else_if = { limit = { has_building = wonder_dol_amroth_01 } remove_building = wonder_dol_amroth_01 }
                 if = { limit = { has_building = wonder_doors_of_durin } remove_building = wonder_doors_of_durin }
+                if = { limit = { has_building = wonder_dragon_knights_capital } remove_building = wonder_dragon_knights_capital }
+                if = { limit = { has_building = wonder_dragon_knights_headquarters } remove_building = wonder_dragon_knights_headquarters }
                 if = { limit = { has_building = wonder_dread_keep } remove_building = wonder_dread_keep }
                 if = { limit = { has_building = wonder_dunharrow_03 } remove_building = wonder_dunharrow_03 }
                 else_if = { limit = { has_building = wonder_dunharrow_02 } remove_building = wonder_dunharrow_02 }
@@ -41579,6 +41722,7 @@ DI_remove_buildings_sgui = {
                 if = { limit = { has_building = wonder_igal_zaram_embassy } remove_building = wonder_igal_zaram_embassy }
                 else_if = { limit = { has_building = wonder_igal_zaram_cleansed } remove_building = wonder_igal_zaram_cleansed }
                 else_if = { limit = { has_building = wonder_igal_zaram } remove_building = wonder_igal_zaram }
+                if = { limit = { has_building = wonder_igal_zaram_warrens } remove_building = wonder_igal_zaram_warrens }
                 if = { limit = { has_building = wonder_imladris_ruined_02 } remove_building = wonder_imladris_ruined_02 }
                 else_if = { limit = { has_building = wonder_imladris_ruined_01 } remove_building = wonder_imladris_ruined_01 }
                 if = { limit = { has_building = wonder_imrazor_hallow } remove_building = wonder_imrazor_hallow }
@@ -42304,6 +42448,8 @@ DI_max_building_upgrades_sgui = {
                 if = { limit = { has_building_or_higher = wonder_denethor_01 NOT = { has_building = wonder_denethor_01 } } add_building = wonder_denethor_01 }
                 if = { limit = { has_building_or_higher = wonder_dol_amroth_01 NOT = { has_building = wonder_dol_amroth_03 } } add_building = wonder_dol_amroth_03 }
                 if = { limit = { has_building_or_higher = wonder_doors_of_durin NOT = { has_building = wonder_doors_of_durin } } add_building = wonder_doors_of_durin }
+                if = { limit = { has_building_or_higher = wonder_dragon_knights_capital NOT = { has_building = wonder_dragon_knights_capital } } add_building = wonder_dragon_knights_capital }
+                if = { limit = { has_building_or_higher = wonder_dragon_knights_headquarters NOT = { has_building = wonder_dragon_knights_headquarters } } add_building = wonder_dragon_knights_headquarters }
                 if = { limit = { has_building_or_higher = wonder_dread_keep NOT = { has_building = wonder_dread_keep } } add_building = wonder_dread_keep }
                 if = { limit = { has_building_or_higher = wonder_dunharrow_01 NOT = { has_building = wonder_dunharrow_03 } } add_building = wonder_dunharrow_03 }
                 if = { limit = { has_building_or_higher = wonder_dunland_shrine NOT = { has_building = wonder_dunland_shrine } } add_building = wonder_dunland_shrine }
@@ -42358,6 +42504,7 @@ DI_max_building_upgrades_sgui = {
                 if = { limit = { has_building_or_higher = wonder_hron_tumrakhi NOT = { has_building = wonder_hron_tumrakhi } } add_building = wonder_hron_tumrakhi }
                 if = { limit = { has_building_or_higher = wonder_iflenak NOT = { has_building = wonder_iflenak } } add_building = wonder_iflenak }
                 if = { limit = { has_building_or_higher = wonder_igal_zaram NOT = { has_building = wonder_igal_zaram_embassy } } add_building = wonder_igal_zaram_embassy }
+                if = { limit = { has_building_or_higher = wonder_igal_zaram_warrens NOT = { has_building = wonder_igal_zaram_warrens } } add_building = wonder_igal_zaram_warrens }
                 if = { limit = { has_building_or_higher = wonder_imladris_ruined_01 NOT = { has_building = wonder_imladris_ruined_02 } } add_building = wonder_imladris_ruined_02 }
                 if = { limit = { has_building_or_higher = wonder_imrazor_hallow NOT = { has_building = wonder_imrazor_hallow } } add_building = wonder_imrazor_hallow }
                 if = { limit = { has_building_or_higher = wonder_isengard_01 NOT = { has_building = wonder_isengard_06 } } add_building = wonder_isengard_06 }
@@ -43785,6 +43932,8 @@ DI_construct_building_sgui = {
                     flag:nafarati_war_shrine = { add_building = nafarati_war_shrine }
                     flag:great_building_arminalethor = { add_building = great_building_arminalethor }
                     flag:great_building_nilulonde = { add_building = great_building_nilulonde }
+                    flag:wonder_dragon_knights_capital = { add_building = wonder_dragon_knights_capital }
+                    flag:wonder_igal_zaram_warrens = { add_building = wonder_igal_zaram_warrens }
                     flag:noria_01 = { add_building = noria_01 }
                     flag:noria_02 = { add_building = noria_02 }
                     flag:noria_03 = { add_building = noria_03 }
@@ -44319,6 +44468,7 @@ DI_construct_building_sgui = {
                     flag:wonder_temple_sulereb_01 = { add_building = wonder_temple_sulereb_01 }
                     flag:wonder_temple_sulereb_02 = { add_building = wonder_temple_sulereb_02 }
                     flag:wonder_temple_sulereb_03 = { add_building = wonder_temple_sulereb_03 }
+                    flag:wonder_dragon_knights_headquarters = { add_building = wonder_dragon_knights_headquarters }
                     flag:wonder_ettenmoors_01 = { add_building = wonder_ettenmoors_01 }
                     flag:wonder_ettenmoors_02 = { add_building = wonder_ettenmoors_02 }
                     flag:wonder_athaircuile_01 = { add_building = wonder_athaircuile_01 }
@@ -46736,6 +46886,12 @@ DI_destroy_building_sgui = {
                     flag:wonder_doors_of_durin = {
                         if = { limit = { has_building = wonder_doors_of_durin } remove_building = wonder_doors_of_durin }
                     }
+                    flag:wonder_dragon_knights_capital = {
+                        if = { limit = { has_building = wonder_dragon_knights_capital } remove_building = wonder_dragon_knights_capital }
+                    }
+                    flag:wonder_dragon_knights_headquarters = {
+                        if = { limit = { has_building = wonder_dragon_knights_headquarters } remove_building = wonder_dragon_knights_headquarters }
+                    }
                     flag:wonder_dread_keep = {
                         if = { limit = { has_building = wonder_dread_keep } remove_building = wonder_dread_keep }
                     }
@@ -46943,6 +47099,9 @@ DI_destroy_building_sgui = {
                         if = { limit = { has_building = wonder_igal_zaram_embassy } remove_building = wonder_igal_zaram_embassy }
                         else_if = { limit = { has_building = wonder_igal_zaram_cleansed } remove_building = wonder_igal_zaram_cleansed }
                         else_if = { limit = { has_building = wonder_igal_zaram } remove_building = wonder_igal_zaram }
+                    }
+                    flag:wonder_igal_zaram_warrens = {
+                        if = { limit = { has_building = wonder_igal_zaram_warrens } remove_building = wonder_igal_zaram_warrens }
                     }
                     flag:wonder_imladris_ruined = {
                         if = { limit = { has_building = wonder_imladris_ruined_02 } remove_building = wonder_imladris_ruined_02 }
