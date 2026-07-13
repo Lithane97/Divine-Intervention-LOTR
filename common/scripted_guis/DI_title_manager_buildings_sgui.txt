@@ -19563,6 +19563,85 @@ DI_tm_destroy_building_wonder_igal_zaram_warrens_sgui = {
     }
 }
 
+DI_tm_building_wonder_ost_in_edhil_sgui = {
+    scope = character # Player Character
+
+    is_valid = {
+        OR = {
+            NOT = { has_variable = DI_title_manager_building_level }
+            var:DI_title_manager_building_level = 1
+            var:DI_title_manager_building_level = 2
+            var:DI_title_manager_building_level = 3
+            var:DI_title_manager_building_level = 4
+            var:DI_title_manager_building_level = 5
+        }
+    }
+
+    effect = {
+        save_scope_as = player
+
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = {
+                    limit = {
+                        OR = {
+                            NOT = { scope:player = { has_variable = DI_title_manager_building_level } }
+                            scope:player = { var:DI_title_manager_building_level = 1 }
+                        }
+                    }
+                    add_building = wonder_ost_in_edhil_01
+                }
+                else_if = {
+                    limit = {
+                        scope:player = { var:DI_title_manager_building_level = 2 }
+                    }
+                    add_building = wonder_ost_in_edhil_02
+                }
+                else_if = {
+                    limit = {
+                        scope:player = { var:DI_title_manager_building_level = 3 }
+                    }
+                    add_building = wonder_ost_in_edhil_03
+                }
+                else_if = {
+                    limit = {
+                        scope:player = { var:DI_title_manager_building_level = 4 }
+                    }
+                    add_building = wonder_ost_in_edhil_04
+                }
+                else_if = {
+                    limit = {
+                        scope:player = { var:DI_title_manager_building_level = 5 }
+                    }
+                    add_building = wonder_ost_in_edhil_05
+                }
+            }
+        }
+    }
+}
+
+DI_tm_destroy_building_wonder_ost_in_edhil_sgui = {
+    scope = character # Player Character
+
+    effect = {
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = { limit = { has_building = wonder_ost_in_edhil_05 } remove_building = wonder_ost_in_edhil_05 }
+                else_if = { limit = { has_building = wonder_ost_in_edhil_04 } remove_building = wonder_ost_in_edhil_04 }
+                else_if = { limit = { has_building = wonder_ost_in_edhil_03 } remove_building = wonder_ost_in_edhil_03 }
+                else_if = { limit = { has_building = wonder_ost_in_edhil_02 } remove_building = wonder_ost_in_edhil_02 }
+                else_if = { limit = { has_building = wonder_ost_in_edhil_01 } remove_building = wonder_ost_in_edhil_01 }
+            }
+        }
+    }
+}
+
 DI_tm_building_noria_sgui = {
     scope = character # Player Character
 
@@ -24867,6 +24946,53 @@ DI_tm_destroy_building_wonder_dunland_shrine_sgui = {
 
             scope:province = {
                 if = { limit = { has_building = wonder_dunland_shrine } remove_building = wonder_dunland_shrine }
+            }
+        }
+    }
+}
+
+DI_tm_building_wonder_harabad_sgui = {
+    scope = character # Player Character
+
+    is_valid = {
+        OR = {
+            NOT = { has_variable = DI_title_manager_building_level }
+            var:DI_title_manager_building_level = 1
+        }
+    }
+
+    effect = {
+        save_scope_as = player
+
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = {
+                    limit = {
+                        OR = {
+                            NOT = { scope:player = { has_variable = DI_title_manager_building_level } }
+                            scope:player = { var:DI_title_manager_building_level = 1 }
+                        }
+                    }
+                    add_building = wonder_harabad_01
+                }
+            }
+        }
+    }
+}
+
+DI_tm_destroy_building_wonder_harabad_sgui = {
+    scope = character # Player Character
+
+    effect = {
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = { limit = { has_building = wonder_harabad_01 } remove_building = wonder_harabad_01 }
             }
         }
     }
@@ -32018,53 +32144,6 @@ DI_tm_destroy_building_wonder_imladris_ruined_sgui = {
     }
 }
 
-DI_tm_building_wonder_mirdairond_sgui = {
-    scope = character # Player Character
-
-    is_valid = {
-        OR = {
-            NOT = { has_variable = DI_title_manager_building_level }
-            var:DI_title_manager_building_level = 1
-        }
-    }
-
-    effect = {
-        save_scope_as = player
-
-        every_in_list = {
-            variable = DI_action_provinces
-            save_scope_as = province
-
-            scope:province = {
-                if = {
-                    limit = {
-                        OR = {
-                            NOT = { scope:player = { has_variable = DI_title_manager_building_level } }
-                            scope:player = { var:DI_title_manager_building_level = 1 }
-                        }
-                    }
-                    add_building = wonder_mirdairond
-                }
-            }
-        }
-    }
-}
-
-DI_tm_destroy_building_wonder_mirdairond_sgui = {
-    scope = character # Player Character
-
-    effect = {
-        every_in_list = {
-            variable = DI_action_provinces
-            save_scope_as = province
-
-            scope:province = {
-                if = { limit = { has_building = wonder_mirdairond } remove_building = wonder_mirdairond }
-            }
-        }
-    }
-}
-
 DI_tm_building_wonder_azan_zaram_sgui = {
     scope = character # Player Character
 
@@ -34492,6 +34571,61 @@ DI_tm_destroy_building_wonder_arpel_sgui = {
             scope:province = {
                 if = { limit = { has_building = wonder_arpel_02 } remove_building = wonder_arpel_02 }
                 else_if = { limit = { has_building = wonder_arpel_01 } remove_building = wonder_arpel_01 }
+            }
+        }
+    }
+}
+
+DI_tm_building_azrathani_mines_sgui = {
+    scope = character # Player Character
+
+    is_valid = {
+        OR = {
+            NOT = { has_variable = DI_title_manager_building_level }
+            var:DI_title_manager_building_level = 1
+            var:DI_title_manager_building_level = 2
+        }
+    }
+
+    effect = {
+        save_scope_as = player
+
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = {
+                    limit = {
+                        OR = {
+                            NOT = { scope:player = { has_variable = DI_title_manager_building_level } }
+                            scope:player = { var:DI_title_manager_building_level = 1 }
+                        }
+                    }
+                    add_building = azrathani_mines_01
+                }
+                else_if = {
+                    limit = {
+                        scope:player = { var:DI_title_manager_building_level = 2 }
+                    }
+                    add_building = azrathani_mines_02
+                }
+            }
+        }
+    }
+}
+
+DI_tm_destroy_building_azrathani_mines_sgui = {
+    scope = character # Player Character
+
+    effect = {
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = { limit = { has_building = azrathani_mines_02 } remove_building = azrathani_mines_02 }
+                else_if = { limit = { has_building = azrathani_mines_01 } remove_building = azrathani_mines_01 }
             }
         }
     }
@@ -40416,6 +40550,8 @@ DI_remove_buildings_sgui = {
                 else_if = { limit = { has_building = argentiera_mines_01 } remove_building = argentiera_mines_01 }
                 if = { limit = { has_building = arsasan_mints_01 } remove_building = arsasan_mints_01 }
                 if = { limit = { has_building = athyrmor_pyramids } remove_building = athyrmor_pyramids }
+                if = { limit = { has_building = azrathani_mines_02 } remove_building = azrathani_mines_02 }
+                else_if = { limit = { has_building = azrathani_mines_01 } remove_building = azrathani_mines_01 }
                 if = { limit = { has_building = bandits_cleared } remove_building = bandits_cleared }
                 else_if = { limit = { has_building = bandits } remove_building = bandits }
                 if = { limit = { has_building = baofeng_mines_04 } remove_building = baofeng_mines_04 }
@@ -41701,6 +41837,7 @@ DI_remove_buildings_sgui = {
                 if = { limit = { has_building = wonder_hamat_maresh_03 } remove_building = wonder_hamat_maresh_03 }
                 else_if = { limit = { has_building = wonder_hamat_maresh_02 } remove_building = wonder_hamat_maresh_02 }
                 else_if = { limit = { has_building = wonder_hamat_maresh_01 } remove_building = wonder_hamat_maresh_01 }
+                if = { limit = { has_building = wonder_harabad_01 } remove_building = wonder_harabad_01 }
                 if = { limit = { has_building = wonder_harlond_02 } remove_building = wonder_harlond_02 }
                 else_if = { limit = { has_building = wonder_harlond_01 } remove_building = wonder_harlond_01 }
                 if = { limit = { has_building = wonder_haven_korlea_03 } remove_building = wonder_haven_korlea_03 }
@@ -41796,7 +41933,6 @@ DI_remove_buildings_sgui = {
                 if = { limit = { has_building = wonder_mines_of_bruni_3 } remove_building = wonder_mines_of_bruni_3 }
                 else_if = { limit = { has_building = wonder_mines_of_bruni_2 } remove_building = wonder_mines_of_bruni_2 }
                 else_if = { limit = { has_building = wonder_mines_of_bruni } remove_building = wonder_mines_of_bruni }
-                if = { limit = { has_building = wonder_mirdairond } remove_building = wonder_mirdairond }
                 if = { limit = { has_building = wonder_mirdamas_02 } remove_building = wonder_mirdamas_02 }
                 else_if = { limit = { has_building = wonder_mirdamas_01 } remove_building = wonder_mirdamas_01 }
                 if = { limit = { has_building = wonder_mirlond_haven } remove_building = wonder_mirlond_haven }
@@ -41853,6 +41989,11 @@ DI_remove_buildings_sgui = {
                 else_if = { limit = { has_building = wonder_osgiliath_02 } remove_building = wonder_osgiliath_02 }
                 else_if = { limit = { has_building = wonder_osgiliath_01 } remove_building = wonder_osgiliath_01 }
                 if = { limit = { has_building = wonder_osgiliath_original } remove_building = wonder_osgiliath_original }
+                if = { limit = { has_building = wonder_ost_in_edhil_05 } remove_building = wonder_ost_in_edhil_05 }
+                else_if = { limit = { has_building = wonder_ost_in_edhil_04 } remove_building = wonder_ost_in_edhil_04 }
+                else_if = { limit = { has_building = wonder_ost_in_edhil_03 } remove_building = wonder_ost_in_edhil_03 }
+                else_if = { limit = { has_building = wonder_ost_in_edhil_02 } remove_building = wonder_ost_in_edhil_02 }
+                else_if = { limit = { has_building = wonder_ost_in_edhil_01 } remove_building = wonder_ost_in_edhil_01 }
                 if = { limit = { has_building = wonder_ovatharak_capital } remove_building = wonder_ovatharak_capital }
                 if = { limit = { has_building = wonder_ovatharak_fortress } remove_building = wonder_ovatharak_fortress }
                 if = { limit = { has_building = wonder_palace_joam } remove_building = wonder_palace_joam }
@@ -42046,6 +42187,7 @@ DI_max_building_upgrades_sgui = {
                 if = { limit = { has_building_or_higher = argentiera_mines_01 NOT = { has_building = argentiera_mines_04 } } add_building = argentiera_mines_04 }
                 if = { limit = { has_building_or_higher = arsasan_mints_01 NOT = { has_building = arsasan_mints_01 } } add_building = arsasan_mints_01 }
                 if = { limit = { has_building_or_higher = athyrmor_pyramids NOT = { has_building = athyrmor_pyramids } } add_building = athyrmor_pyramids }
+                if = { limit = { has_building_or_higher = azrathani_mines_01 NOT = { has_building = azrathani_mines_02 } } add_building = azrathani_mines_02 }
                 if = { limit = { has_building_or_higher = bandits NOT = { has_building = bandits_cleared } } add_building = bandits_cleared }
                 if = { limit = { has_building_or_higher = baofeng_mines_01 NOT = { has_building = baofeng_mines_04 } } add_building = baofeng_mines_04 }
                 if = { limit = { has_building_or_higher = barracks_01 NOT = { has_building = barracks_08 } } add_building = barracks_08 }
@@ -42491,6 +42633,7 @@ DI_max_building_upgrades_sgui = {
                 if = { limit = { has_building_or_higher = wonder_hall_of_the_king NOT = { has_building = wonder_hall_of_the_king } } add_building = wonder_hall_of_the_king }
                 if = { limit = { has_building_or_higher = wonder_hall_of_the_king_occupied NOT = { has_building = wonder_hall_of_the_king_liberated } } add_building = wonder_hall_of_the_king_liberated }
                 if = { limit = { has_building_or_higher = wonder_hamat_maresh_01 NOT = { has_building = wonder_hamat_maresh_03 } } add_building = wonder_hamat_maresh_03 }
+                if = { limit = { has_building_or_higher = wonder_harabad_01 NOT = { has_building = wonder_harabad_01 } } add_building = wonder_harabad_01 }
                 if = { limit = { has_building_or_higher = wonder_harlond_01 NOT = { has_building = wonder_harlond_02 } } add_building = wonder_harlond_02 }
                 if = { limit = { has_building_or_higher = wonder_haven_korlea_01 NOT = { has_building = wonder_haven_korlea_03 } } add_building = wonder_haven_korlea_03 }
                 if = { limit = { has_building_or_higher = wonder_haven_of_inzilloni NOT = { has_building = wonder_haven_of_inzilloni } } add_building = wonder_haven_of_inzilloni }
@@ -42538,7 +42681,6 @@ DI_max_building_upgrades_sgui = {
                 if = { limit = { has_building_or_higher = wonder_minas_ithil_01 NOT = { has_building = wonder_minas_ithil_03 } } add_building = wonder_minas_ithil_03 }
                 if = { limit = { has_building_or_higher = wonder_minas_ithil_original NOT = { has_building = wonder_minas_ithil_original } } add_building = wonder_minas_ithil_original }
                 if = { limit = { has_building_or_higher = wonder_mines_of_bruni NOT = { has_building = wonder_mines_of_bruni_3 } } add_building = wonder_mines_of_bruni_3 }
-                if = { limit = { has_building_or_higher = wonder_mirdairond NOT = { has_building = wonder_mirdairond } } add_building = wonder_mirdairond }
                 if = { limit = { has_building_or_higher = wonder_mirdamas_01 NOT = { has_building = wonder_mirdamas_02 } } add_building = wonder_mirdamas_02 }
                 if = { limit = { has_building_or_higher = wonder_mirlond NOT = { has_building = wonder_mirlond_haven } } add_building = wonder_mirlond_haven }
                 if = { limit = { has_building_or_higher = wonder_mirrormere NOT = { has_building = wonder_mirrormere } } add_building = wonder_mirrormere }
@@ -42565,6 +42707,7 @@ DI_max_building_upgrades_sgui = {
                 if = { limit = { has_building_or_higher = wonder_orodruin_01 NOT = { has_building = wonder_orodruin_03 } } add_building = wonder_orodruin_03 }
                 if = { limit = { has_building_or_higher = wonder_osgiliath_01 NOT = { has_building = wonder_osgiliath_05 } } add_building = wonder_osgiliath_05 }
                 if = { limit = { has_building_or_higher = wonder_osgiliath_original NOT = { has_building = wonder_osgiliath_original } } add_building = wonder_osgiliath_original }
+                if = { limit = { has_building_or_higher = wonder_ost_in_edhil_01 NOT = { has_building = wonder_ost_in_edhil_05 } } add_building = wonder_ost_in_edhil_05 }
                 if = { limit = { has_building_or_higher = wonder_ovatharak_capital NOT = { has_building = wonder_ovatharak_capital } } add_building = wonder_ovatharak_capital }
                 if = { limit = { has_building_or_higher = wonder_ovatharak_fortress NOT = { has_building = wonder_ovatharak_fortress } } add_building = wonder_ovatharak_fortress }
                 if = { limit = { has_building_or_higher = wonder_palace_joam NOT = { has_building = wonder_palace_joam } } add_building = wonder_palace_joam }
@@ -43934,6 +44077,11 @@ DI_construct_building_sgui = {
                     flag:great_building_nilulonde = { add_building = great_building_nilulonde }
                     flag:wonder_dragon_knights_capital = { add_building = wonder_dragon_knights_capital }
                     flag:wonder_igal_zaram_warrens = { add_building = wonder_igal_zaram_warrens }
+                    flag:wonder_ost_in_edhil_01 = { add_building = wonder_ost_in_edhil_01 }
+                    flag:wonder_ost_in_edhil_02 = { add_building = wonder_ost_in_edhil_02 }
+                    flag:wonder_ost_in_edhil_03 = { add_building = wonder_ost_in_edhil_03 }
+                    flag:wonder_ost_in_edhil_04 = { add_building = wonder_ost_in_edhil_04 }
+                    flag:wonder_ost_in_edhil_05 = { add_building = wonder_ost_in_edhil_05 }
                     flag:noria_01 = { add_building = noria_01 }
                     flag:noria_02 = { add_building = noria_02 }
                     flag:noria_03 = { add_building = noria_03 }
@@ -44270,6 +44418,7 @@ DI_construct_building_sgui = {
                     flag:wonder_barmorthil_01 = { add_building = wonder_barmorthil_01 }
                     flag:wonder_barmorthil_02 = { add_building = wonder_barmorthil_02 }
                     flag:wonder_dunland_shrine = { add_building = wonder_dunland_shrine }
+                    flag:wonder_harabad_01 = { add_building = wonder_harabad_01 }
                     flag:wonder_tharagrondost_01 = { add_building = wonder_tharagrondost_01 }
                     flag:wonder_tharagrondost_02 = { add_building = wonder_tharagrondost_02 }
                     flag:wonder_tharagrondost_expanded = { add_building = wonder_tharagrondost_expanded }
@@ -44510,7 +44659,6 @@ DI_construct_building_sgui = {
                     flag:wonder_house_of_elrond_abandoned_02 = { add_building = wonder_house_of_elrond_abandoned_02 }
                     flag:wonder_imladris_ruined_01 = { add_building = wonder_imladris_ruined_01 }
                     flag:wonder_imladris_ruined_02 = { add_building = wonder_imladris_ruined_02 }
-                    flag:wonder_mirdairond = { add_building = wonder_mirdairond }
                     flag:wonder_azan_zaram_01 = { add_building = wonder_azan_zaram_01 }
                     flag:wonder_azan_zaram_02 = { add_building = wonder_azan_zaram_02 }
                     flag:wonder_thakalgund_1 = { add_building = wonder_thakalgund_1 }
@@ -44581,6 +44729,8 @@ DI_construct_building_sgui = {
                     flag:wonder_mispir_palace = { add_building = wonder_mispir_palace }
                     flag:wonder_arpel_01 = { add_building = wonder_arpel_01 }
                     flag:wonder_arpel_02 = { add_building = wonder_arpel_02 }
+                    flag:azrathani_mines_01 = { add_building = azrathani_mines_01 }
+                    flag:azrathani_mines_02 = { add_building = azrathani_mines_02 }
                     flag:wonder_akos = { add_building = wonder_akos }
                     flag:wonder_ayahopa_01 = { add_building = wonder_ayahopa_01 }
                     flag:wonder_ayahopa_02 = { add_building = wonder_ayahopa_02 }
@@ -44863,6 +45013,10 @@ DI_destroy_building_sgui = {
                     }
                     flag:athyrmor_pyramids = {
                         if = { limit = { has_building = athyrmor_pyramids } remove_building = athyrmor_pyramids }
+                    }
+                    flag:azrathani_mines = {
+                        if = { limit = { has_building = azrathani_mines_02 } remove_building = azrathani_mines_02 }
+                        else_if = { limit = { has_building = azrathani_mines_01 } remove_building = azrathani_mines_01 }
                     }
                     flag:bandits = {
                         if = { limit = { has_building = bandits_cleared } remove_building = bandits_cleared }
@@ -47053,6 +47207,9 @@ DI_destroy_building_sgui = {
                         else_if = { limit = { has_building = wonder_hamat_maresh_02 } remove_building = wonder_hamat_maresh_02 }
                         else_if = { limit = { has_building = wonder_hamat_maresh_01 } remove_building = wonder_hamat_maresh_01 }
                     }
+                    flag:wonder_harabad = {
+                        if = { limit = { has_building = wonder_harabad_01 } remove_building = wonder_harabad_01 }
+                    }
                     flag:wonder_harlond = {
                         if = { limit = { has_building = wonder_harlond_02 } remove_building = wonder_harlond_02 }
                         else_if = { limit = { has_building = wonder_harlond_01 } remove_building = wonder_harlond_01 }
@@ -47242,9 +47399,6 @@ DI_destroy_building_sgui = {
                         else_if = { limit = { has_building = wonder_mines_of_bruni_2 } remove_building = wonder_mines_of_bruni_2 }
                         else_if = { limit = { has_building = wonder_mines_of_bruni } remove_building = wonder_mines_of_bruni }
                     }
-                    flag:wonder_mirdairond = {
-                        if = { limit = { has_building = wonder_mirdairond } remove_building = wonder_mirdairond }
-                    }
                     flag:wonder_mirdamas = {
                         if = { limit = { has_building = wonder_mirdamas_02 } remove_building = wonder_mirdamas_02 }
                         else_if = { limit = { has_building = wonder_mirdamas_01 } remove_building = wonder_mirdamas_01 }
@@ -47352,6 +47506,13 @@ DI_destroy_building_sgui = {
                     }
                     flag:wonder_osgiliath_original = {
                         if = { limit = { has_building = wonder_osgiliath_original } remove_building = wonder_osgiliath_original }
+                    }
+                    flag:wonder_ost_in_edhil = {
+                        if = { limit = { has_building = wonder_ost_in_edhil_05 } remove_building = wonder_ost_in_edhil_05 }
+                        else_if = { limit = { has_building = wonder_ost_in_edhil_04 } remove_building = wonder_ost_in_edhil_04 }
+                        else_if = { limit = { has_building = wonder_ost_in_edhil_03 } remove_building = wonder_ost_in_edhil_03 }
+                        else_if = { limit = { has_building = wonder_ost_in_edhil_02 } remove_building = wonder_ost_in_edhil_02 }
+                        else_if = { limit = { has_building = wonder_ost_in_edhil_01 } remove_building = wonder_ost_in_edhil_01 }
                     }
                     flag:wonder_ovatharak_capital = {
                         if = { limit = { has_building = wonder_ovatharak_capital } remove_building = wonder_ovatharak_capital }
