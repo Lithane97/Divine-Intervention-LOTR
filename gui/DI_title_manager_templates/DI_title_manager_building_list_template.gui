@@ -7109,26 +7109,6 @@ template DI_TM_Building_List_Template
             button_standard_clean = {
                 layoutpolicy_horizontal = expanding
                 size = { 0 44 }
-                enabled = "[GetScriptedGui('DI_tm_building_erebor_mines_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                onclick = "[GetScriptedGui('DI_tm_building_erebor_mines_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                onrightclick = "[GetScriptedGui('DI_tm_destroy_building_erebor_mines_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
-                button_ignore = none
-                tooltip = "DI_tm_building_button_tt"
-                using = tooltip_w
-
-                background = { using = Background_Area_Dark }
-
-                text_single = {
-                    parentanchor = left|vcenter
-                    margin_left = 8
-                    text = "building_type_erebor_mines_01"
-                    default_format = "#low"
-                    }
-            }
-
-            button_standard_clean = {
-                layoutpolicy_horizontal = expanding
-                size = { 0 44 }
                 enabled = "[GetScriptedGui('DI_tm_building_iron_mines_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                 onclick = "[GetScriptedGui('DI_tm_building_iron_mines_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                 onrightclick = "[GetScriptedGui('DI_tm_destroy_building_iron_mines_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
@@ -11716,6 +11696,26 @@ template DI_TM_Building_List_Template
                     parentanchor = left|vcenter
                     margin_left = 8
                     text = "building_type_wonder_igal_zaram"
+                    default_format = "#low"
+                    }
+            }
+
+            button_standard_clean = {
+                layoutpolicy_horizontal = expanding
+                size = { 0 44 }
+                enabled = "[GetScriptedGui('DI_tm_building_erebor_mines_sgui').IsValid(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onclick = "[GetScriptedGui('DI_tm_building_erebor_mines_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                onrightclick = "[GetScriptedGui('DI_tm_destroy_building_erebor_mines_sgui').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                button_ignore = none
+                tooltip = "DI_tm_building_button_tt"
+                using = tooltip_w
+
+                background = { using = Background_Area_Dark }
+
+                text_single = {
+                    parentanchor = left|vcenter
+                    margin_left = 8
+                    text = "building_type_erebor_mines_01"
                     default_format = "#low"
                     }
             }

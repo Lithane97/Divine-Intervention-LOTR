@@ -1977,6 +1977,32 @@ DI_culture_has_innovation_daen_shipbuilding = {
 	}
 }
 
+# innovation_northmen_shipbuilding
+DI_remove_innovation_northmen_shipbuilding = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_northmen_shipbuilding
+		}
+	}
+}
+
+DI_add_innovation_northmen_shipbuilding = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_northmen_shipbuilding
+		}
+	}
+}
+
+DI_culture_has_innovation_northmen_shipbuilding = {
+	scope = culture
+	is_valid = {
+		has_innovation = innovation_northmen_shipbuilding
+	}
+}
+
 # innovation_lesser_numenorean_heritage
 DI_remove_innovation_lesser_numenorean_heritage = {
 	scope = character
@@ -2364,6 +2390,32 @@ DI_culture_has_innovation_namalo = {
 	scope = culture
 	is_valid = {
 		has_innovation = innovation_namalo
+	}
+}
+
+# innovation_apysan_legacy
+DI_remove_innovation_apysan_legacy = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			remove_innovation = innovation_apysan_legacy
+		}
+	}
+}
+
+DI_add_innovation_apysan_legacy = {
+	scope = character
+	effect = {
+		var:DI_innovation_selected_culture = {
+			add_innovation = innovation_apysan_legacy
+		}
+	}
+}
+
+DI_culture_has_innovation_apysan_legacy = {
+	scope = culture
+	is_valid = {
+		has_innovation = innovation_apysan_legacy
 	}
 }
 

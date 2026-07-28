@@ -2029,6 +2029,27 @@ template DI_innovation_all_vanilla
 
 
             DI_innovation_flowcontainer = {
+                datacontext = "[GetCultureInnovationType('innovation_northmen_shipbuilding')]"
+
+                blockoverride "has_visible" {
+                    visible = "[GetScriptedGui('DI_culture_has_innovation_northmen_shipbuilding').IsValid(GuiScope.SetRoot(Culture.MakeScope).End)]"
+                }
+
+                blockoverride "on_remove" {
+                    onrightclick = "[GetScriptedGui('DI_remove_innovation_northmen_shipbuilding').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                }
+
+                blockoverride "not_has_visible" {
+                    visible = "[Not(GetScriptedGui('DI_culture_has_innovation_northmen_shipbuilding').IsValid(GuiScope.SetRoot(Culture.MakeScope).End))]"
+                }
+
+                blockoverride "on_add" {
+                    onclick = "[GetScriptedGui('DI_add_innovation_northmen_shipbuilding').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                }
+            }
+
+
+            DI_innovation_flowcontainer = {
                 datacontext = "[GetCultureInnovationType('innovation_lesser_numenorean_heritage')]"
 
                 blockoverride "has_visible" {
@@ -2318,6 +2339,27 @@ template DI_innovation_all_vanilla
 
                 blockoverride "on_add" {
                     onclick = "[GetScriptedGui('DI_add_innovation_namalo').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                }
+            }
+
+
+            DI_innovation_flowcontainer = {
+                datacontext = "[GetCultureInnovationType('innovation_apysan_legacy')]"
+
+                blockoverride "has_visible" {
+                    visible = "[GetScriptedGui('DI_culture_has_innovation_apysan_legacy').IsValid(GuiScope.SetRoot(Culture.MakeScope).End)]"
+                }
+
+                blockoverride "on_remove" {
+                    onrightclick = "[GetScriptedGui('DI_remove_innovation_apysan_legacy').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+                }
+
+                blockoverride "not_has_visible" {
+                    visible = "[Not(GetScriptedGui('DI_culture_has_innovation_apysan_legacy').IsValid(GuiScope.SetRoot(Culture.MakeScope).End))]"
+                }
+
+                blockoverride "on_add" {
+                    onclick = "[GetScriptedGui('DI_add_innovation_apysan_legacy').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
                 }
             }
 

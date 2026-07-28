@@ -19855,93 +19855,6 @@ DI_tm_destroy_building_royal_pavilion_sgui = {
     }
 }
 
-DI_tm_building_erebor_mines_sgui = {
-    scope = character # Player Character
-
-    is_valid = {
-        OR = {
-            NOT = { has_variable = DI_title_manager_building_level }
-            var:DI_title_manager_building_level = 1
-            var:DI_title_manager_building_level = 2
-            var:DI_title_manager_building_level = 3
-            var:DI_title_manager_building_level = 4
-            var:DI_title_manager_building_level = 5
-            var:DI_title_manager_building_level = 6
-        }
-    }
-
-    effect = {
-        save_scope_as = player
-
-        every_in_list = {
-            variable = DI_action_provinces
-            save_scope_as = province
-
-            scope:province = {
-                if = {
-                    limit = {
-                        OR = {
-                            NOT = { scope:player = { has_variable = DI_title_manager_building_level } }
-                            scope:player = { var:DI_title_manager_building_level = 1 }
-                        }
-                    }
-                    add_building = erebor_mines_01
-                }
-                else_if = {
-                    limit = {
-                        scope:player = { var:DI_title_manager_building_level = 2 }
-                    }
-                    add_building = erebor_mines_02
-                }
-                else_if = {
-                    limit = {
-                        scope:player = { var:DI_title_manager_building_level = 3 }
-                    }
-                    add_building = erebor_mines_03
-                }
-                else_if = {
-                    limit = {
-                        scope:player = { var:DI_title_manager_building_level = 4 }
-                    }
-                    add_building = erebor_mines_04
-                }
-                else_if = {
-                    limit = {
-                        scope:player = { var:DI_title_manager_building_level = 5 }
-                    }
-                    add_building = erebor_mines_05
-                }
-                else_if = {
-                    limit = {
-                        scope:player = { var:DI_title_manager_building_level = 6 }
-                    }
-                    add_building = erebor_mines_06
-                }
-            }
-        }
-    }
-}
-
-DI_tm_destroy_building_erebor_mines_sgui = {
-    scope = character # Player Character
-
-    effect = {
-        every_in_list = {
-            variable = DI_action_provinces
-            save_scope_as = province
-
-            scope:province = {
-                if = { limit = { has_building = erebor_mines_06 } remove_building = erebor_mines_06 }
-                else_if = { limit = { has_building = erebor_mines_05 } remove_building = erebor_mines_05 }
-                else_if = { limit = { has_building = erebor_mines_04 } remove_building = erebor_mines_04 }
-                else_if = { limit = { has_building = erebor_mines_03 } remove_building = erebor_mines_03 }
-                else_if = { limit = { has_building = erebor_mines_02 } remove_building = erebor_mines_02 }
-                else_if = { limit = { has_building = erebor_mines_01 } remove_building = erebor_mines_01 }
-            }
-        }
-    }
-}
-
 DI_tm_building_iron_mines_sgui = {
     scope = character # Player Character
 
@@ -33839,6 +33752,93 @@ DI_tm_destroy_building_wonder_igal_zaram_sgui = {
     }
 }
 
+DI_tm_building_erebor_mines_sgui = {
+    scope = character # Player Character
+
+    is_valid = {
+        OR = {
+            NOT = { has_variable = DI_title_manager_building_level }
+            var:DI_title_manager_building_level = 1
+            var:DI_title_manager_building_level = 2
+            var:DI_title_manager_building_level = 3
+            var:DI_title_manager_building_level = 4
+            var:DI_title_manager_building_level = 5
+            var:DI_title_manager_building_level = 6
+        }
+    }
+
+    effect = {
+        save_scope_as = player
+
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = {
+                    limit = {
+                        OR = {
+                            NOT = { scope:player = { has_variable = DI_title_manager_building_level } }
+                            scope:player = { var:DI_title_manager_building_level = 1 }
+                        }
+                    }
+                    add_building = erebor_mines_01
+                }
+                else_if = {
+                    limit = {
+                        scope:player = { var:DI_title_manager_building_level = 2 }
+                    }
+                    add_building = erebor_mines_02
+                }
+                else_if = {
+                    limit = {
+                        scope:player = { var:DI_title_manager_building_level = 3 }
+                    }
+                    add_building = erebor_mines_03
+                }
+                else_if = {
+                    limit = {
+                        scope:player = { var:DI_title_manager_building_level = 4 }
+                    }
+                    add_building = erebor_mines_04
+                }
+                else_if = {
+                    limit = {
+                        scope:player = { var:DI_title_manager_building_level = 5 }
+                    }
+                    add_building = erebor_mines_05
+                }
+                else_if = {
+                    limit = {
+                        scope:player = { var:DI_title_manager_building_level = 6 }
+                    }
+                    add_building = erebor_mines_06
+                }
+            }
+        }
+    }
+}
+
+DI_tm_destroy_building_erebor_mines_sgui = {
+    scope = character # Player Character
+
+    effect = {
+        every_in_list = {
+            variable = DI_action_provinces
+            save_scope_as = province
+
+            scope:province = {
+                if = { limit = { has_building = erebor_mines_06 } remove_building = erebor_mines_06 }
+                else_if = { limit = { has_building = erebor_mines_05 } remove_building = erebor_mines_05 }
+                else_if = { limit = { has_building = erebor_mines_04 } remove_building = erebor_mines_04 }
+                else_if = { limit = { has_building = erebor_mines_03 } remove_building = erebor_mines_03 }
+                else_if = { limit = { has_building = erebor_mines_02 } remove_building = erebor_mines_02 }
+                else_if = { limit = { has_building = erebor_mines_01 } remove_building = erebor_mines_01 }
+            }
+        }
+    }
+}
+
 DI_tm_building_wonder_mines_of_bruni_sgui = {
     scope = character # Player Character
 
@@ -44094,12 +44094,6 @@ DI_construct_building_sgui = {
                     flag:royal_pavilion_02 = { add_building = royal_pavilion_02 }
                     flag:royal_pavilion_03 = { add_building = royal_pavilion_03 }
                     flag:royal_pavilion_04 = { add_building = royal_pavilion_04 }
-                    flag:erebor_mines_01 = { add_building = erebor_mines_01 }
-                    flag:erebor_mines_02 = { add_building = erebor_mines_02 }
-                    flag:erebor_mines_03 = { add_building = erebor_mines_03 }
-                    flag:erebor_mines_04 = { add_building = erebor_mines_04 }
-                    flag:erebor_mines_05 = { add_building = erebor_mines_05 }
-                    flag:erebor_mines_06 = { add_building = erebor_mines_06 }
                     flag:iron_mines_01 = { add_building = iron_mines_01 }
                     flag:iron_mines_02 = { add_building = iron_mines_02 }
                     flag:iron_mines_03 = { add_building = iron_mines_03 }
@@ -44710,6 +44704,12 @@ DI_construct_building_sgui = {
                     flag:wonder_igal_zaram = { add_building = wonder_igal_zaram }
                     flag:wonder_igal_zaram_cleansed = { add_building = wonder_igal_zaram_cleansed }
                     flag:wonder_igal_zaram_embassy = { add_building = wonder_igal_zaram_embassy }
+                    flag:erebor_mines_01 = { add_building = erebor_mines_01 }
+                    flag:erebor_mines_02 = { add_building = erebor_mines_02 }
+                    flag:erebor_mines_03 = { add_building = erebor_mines_03 }
+                    flag:erebor_mines_04 = { add_building = erebor_mines_04 }
+                    flag:erebor_mines_05 = { add_building = erebor_mines_05 }
+                    flag:erebor_mines_06 = { add_building = erebor_mines_06 }
                     flag:wonder_mines_of_bruni = { add_building = wonder_mines_of_bruni }
                     flag:wonder_mines_of_bruni_2 = { add_building = wonder_mines_of_bruni_2 }
                     flag:wonder_mines_of_bruni_3 = { add_building = wonder_mines_of_bruni_3 }
