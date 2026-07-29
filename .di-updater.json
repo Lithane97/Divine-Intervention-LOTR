@@ -68,7 +68,7 @@
     },
     "common/scripted_guis/DI_title_manager_buildings_sgui.txt": {
       "kind": "generated",
-      "last_written_hash": "792ef5be64ea73d4e0d568b89deeb416473d90dd6808014bc7a048dc335214fe"
+      "last_written_hash": "a519b77054d2f049ed4cba19d36f1e9c6ad99c2de016f957a59f058caa682968"
     },
     "common/scripted_triggers/DI_court_position_spawner_overrides.txt": {
       "kind": "generated",
@@ -249,6 +249,10 @@
     "localization/spanish/gui/DI_holding_filters_l_spanish.yml": {
       "kind": "generated",
       "last_written_hash": "2d077234fe81e203064579123cf57a4b9b9e65e4d8c364d142c183e62f716823"
+    },
+    "common/scripted_effects/DI_title_manager_buildings_effects.txt": {
+      "kind": "generated",
+      "last_written_hash": "d2fceab45869f2ace09075dbf08f3b8374325c85dcc1da558b12825632832a32"
     }
   }
 }
